@@ -1,0 +1,21 @@
+GRANDANGOLO PRINT - APP WEB INSTALLABILE (PWA)
+
+Contenuto della cartella
+  index.html              l'app (configuratore completo)
+  manifest.webmanifest    nome, colori e icone dell'app
+  sw.js                   funzionamento offline
+  icon-*.png, apple-touch-icon.png   icone
+
+Come pubblicarla (serve un hosting HTTPS, i file vanno nella stessa cartella)
+  1. Netlify Drop (il piu' semplice): vai su app.netlify.com/drop e trascina qui l'intera cartella.
+     Ottieni subito un indirizzo https://... da condividere.
+  2. Oppure Cloudflare Pages, GitHub Pages o lo spazio web di un tuo dominio (es. app.tuodominio.it).
+  3. Apri l'indirizzo dal telefono:
+       Android (Chrome): compare il pulsante "Installa l'app" nella pagina, oppure menu > Installa app.
+       iPhone (Safari): Condividi > Aggiungi alla schermata Home.
+       Computer (Chrome/Edge): icona di installazione nella barra dell'indirizzo.
+
+Note
+  - Non funziona aprendo index.html dal disco: l'installazione richiede un indirizzo https.
+  - Se modifichi index.html, cambia il numero in sw.js (CACHE = 'grandangolo-v2') per far aggiornare l'app ai clienti.
+  - Il numero WhatsApp e' nella riga WA_NUMBER dentro index.html.
